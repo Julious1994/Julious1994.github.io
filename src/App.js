@@ -1,24 +1,114 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled, { ThemeProvider } from "styled-components";
+import theme from "./theme";
+
+// import logo from "./assets/logo.mp4";
+import logo from "./assets/logo.png";
+import invidmeLogo from "./assets/invidme.png";
+import ScreenImage1 from "./assets/1.jpg";
+import ScreenImage2 from "./assets/2.jpg";
+import ScreenImage3 from "./assets/3.jpg";
+import IosLogo from "./assets/apple-logo.png";
+import AndroidLogo from "./assets/android-logo.png";
+
+import Carousel from "./Carousel";
+import "./App.css";
+
+const Main = styled.div`
+  padding: 0px 10%;
+`;
+
+const LogoHeader = styled.div`
+  display: flex;
+  padding-top: 25px;
+  flex-wrap: wrap;
+`;
+
+const ScreenImage = styled.img`
+  min-width: 125px;
+  width: 10%;
+  height: 275px;
+  margin-right: 8px;
+  @media (max-width: 464px) {
+    width: 50%;
+    margin: 16px;
+  }
+`;
+
+const ScreenContainer = styled.div`
+  display: flex;
+  flex-wrap: no-wrap;
+  @media (max-width: 464px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  @media (max-width: 924px) {
+    width: 100%;
+    justify-content: center;
+    margin-top: 16px;
+  }
+`;
+
+const LogoContainer = styled.div`
+  margin-right: 10%;
+`;
+
+const LogoImage = styled.img`
+  width: 250px;
+  height: 225px;
+`;
+
+const AppIconContainer = styled.div`
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+`;
+
+const AppIcon = styled.img`
+  width: 225px;
+  height: 175px;
+  cursor: pointer;
+  @media (max-width: 464px) {
+    width: 50%;
+    height: 150px;
+  }
+`;
+
+const IosIcon = styled.img`
+  width: 200px;
+  height: 175px;
+  cursor: pointer;
+  @media (max-width: 464px) {
+    width: 50%;
+    height: 150px;
+  }
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme}>
+      <Main>
+        <LogoHeader>
+          <LogoContainer>
+            <LogoImage src={logo} />
+          </LogoContainer>
+          <ScreenContainer>
+            <ScreenImage src={ScreenImage1} alt="app-screen" />
+            <ScreenImage src={ScreenImage2} alt="app-screen" />
+            <ScreenImage src={ScreenImage3} alt="app-screen" />
+          </ScreenContainer>
+        </LogoHeader>
+        <AppIconContainer>
+          <a href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
+            <AppIcon src={AndroidLogo} />
+          </a>
+          <a href="https://apps.apple.com/us/app/invidme/id1391720769">
+            <IosIcon src={IosLogo} />
+          </a>
+        </AppIconContainer>
+        <Carousel />
+      </Main>
+    </ThemeProvider>
   );
 }
 
