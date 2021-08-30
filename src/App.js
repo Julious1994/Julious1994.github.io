@@ -16,12 +16,15 @@ import "./App.css";
 
 const Main = styled.div`
   padding: 0px 10%;
+  @media (max-width: 464px) {
+    padding: 0px 5%;
+  } 
 `;
 
 const LogoHeader = styled.div`
   display: flex;
   padding-top: 25px;
-  flex-wrap: wrap;
+  justify-content: center;
 `;
 
 const ScreenImage = styled.img`
@@ -30,8 +33,9 @@ const ScreenImage = styled.img`
   height: 275px;
   margin-right: 8px;
   @media (max-width: 464px) {
-    width: 50%;
-    margin: 16px;
+    width: 80px;
+    min-width: 80px;
+    margin: 4px;
   }
 `;
 
@@ -54,8 +58,12 @@ const LogoContainer = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 250px;
-  height: 225px;
+  width: 200px;
+  height: 175px;
+  @media (max-width: 464px) {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const AppIconContainer = styled.div`
@@ -65,22 +73,22 @@ const AppIconContainer = styled.div`
 `;
 
 const AppIcon = styled.img`
-  width: 225px;
-  height: 175px;
-  cursor: pointer;
-  @media (max-width: 464px) {
-    width: 50%;
-    height: 150px;
-  }
-`;
-
-const IosIcon = styled.img`
   width: 200px;
   height: 175px;
   cursor: pointer;
   @media (max-width: 464px) {
-    width: 50%;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+  }
+`;
+
+const IosIcon = styled.img`
+  width: 175px;
+  height: 175px;
+  cursor: pointer;
+  @media (max-width: 464px) {
+    width: 100px;
+    height: 100px;
   }
 `;
 
@@ -89,9 +97,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <Main>
         <LogoHeader>
-          <LogoContainer>
-            <LogoImage src={logo} />
-          </LogoContainer>
           <ScreenContainer>
             <ScreenImage src={ScreenImage1} alt="app-screen" />
             <ScreenImage src={ScreenImage2} alt="app-screen" />
@@ -102,6 +107,7 @@ function App() {
           <a href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
             <AppIcon src={AndroidLogo} />
           </a>
+          <LogoImage src={logo} />
           <a href="https://apps.apple.com/us/app/invidme/id1391720769">
             <IosIcon src={IosLogo} />
           </a>
