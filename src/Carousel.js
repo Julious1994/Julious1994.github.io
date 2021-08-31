@@ -2,41 +2,23 @@ import React from "react";
 import styled from "styled-components";
 import CarouselView from "react-multi-carousel";
 
-import Video1 from "./assets/Video1.mp4";
-import Video2 from "./assets/Video2.mp4";
-import Video3 from "./assets/Video3.mp4";
-import Video4 from "./assets/Video4.mp4";
-import Video5 from "./assets/Video5.mp4";
-import Video6 from "./assets/Video6.mp4";
-import Video7 from "./assets/Video7.mp4";
+import Image1 from "./assets/giphy.gif";
+import Image2 from "./assets/giphy-2.gif";
+import Image3 from "./assets/giphy-3.gif";
+import Image4 from "./assets/giphy-4.gif";
+import Image5 from "./assets/giphy-5.gif";
+import Image6 from "./assets/giphy-6.gif";
+
 import 'react-multi-carousel/lib/styles.css';
 const CarouselContainer = styled.div`
-width: 58%;
-margin: 0px auto;
+  width: 58%;
+  margin: 20px auto;
 `;
 
-const VideoView = styled.div`
+const ImageView = styled.img`
     width: 150px;
-    height: 150px;
+    height: 185px;
 `;
-
-function Video(props) {
-    return (
-        <VideoView 
-            dangerouslySetInnerHTML={{ __html: `
-                <video
-                    loop
-                    muted
-                    autoplay
-                    playsinline
-                    src="${props.src}"
-                    width=150
-                    height=300
-                />,
-        `   }}
-        ></VideoView>
-    )
-}
 
 function Carousel(props) {
   return (
@@ -47,7 +29,6 @@ function Carousel(props) {
         autoPlaySpeed={7000}
         slidesToSlide={1}
         arrows={false}
-        containerClass="carousel-container"
         responsive={{
           desktop: {
             breakpoint: {
@@ -74,13 +55,12 @@ function Carousel(props) {
             partialVisibilityGutter: 30,
           },
         }}>
-        <Video src={Video1} />
-        <Video src={Video2} />
-        <Video src={Video3} />
-        <Video src={Video4} />
-        <Video src={Video5} />
-        <Video src={Video6} />
-        <Video src={Video7} />
+          <ImageView src={Image1} />
+          <ImageView src={Image2} />
+          <ImageView src={Image3} />
+          <ImageView src={Image4} />
+          <ImageView src={Image5} />
+          <ImageView src={Image6} />
       </CarouselView>
     </CarouselContainer>
   );
