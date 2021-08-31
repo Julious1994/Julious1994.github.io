@@ -34,6 +34,7 @@ const ScreenImage = styled.img`
   margin-right: 8px;
   @media (max-width: 464px) {
     width: 80px;
+    height: 200px;
     min-width: 80px;
     margin: 4px;
   }
