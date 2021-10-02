@@ -74,20 +74,22 @@ const ScreenContainer = styled.div`
 const LogoImage = styled.img`
   width: 150px;
   height: 45px;
+  @media (max-width: 464px) {
+    align-self: center;
+  }
 `;
 
 const DownloadView = styled.div`
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 10px;
 
 `;
 
 const DownloadContainer = styled.div`
   background-color: ${({theme}) => theme.primary};
-  padding: 35px 100px;
-  width: 70%;
+  padding: 15px;
   border-radius: 60px;
   align-self: center;
   display: flex;
@@ -95,28 +97,46 @@ const DownloadContainer = styled.div`
 
 const DownloadText = styled.div`
   color: ${({theme}) => theme.secondary};
-  font-size: 20px;
+  font-size: 14px;
   font-weight: bold;
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
+`;
+
+const DownloadLinkList = styled.div`
+  display: flex;
+  @media (max-width: 464px) {
+    margin: 0px auto;
+    margin-top: 7px;
+  }
+`;
+
+const DownlloadLink = styled.a`
+  margin-left: 10px;
 `;
 
 
 const StoreImage = styled.img`
   width: 100px;
   height: 30px;
-  margin-left: 10px;
 `;
 
 const Section = styled.div`
   display: flex;
   margin: 40px;
+  flex-wrap: wrap;
 `;
 
 const SectionImage = styled.img`
   width: 42%;
+  @media (max-width: 464px) {
+    width: 100%;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
 `;
 
 const FirstRightSection = styled.div`
@@ -125,16 +145,31 @@ const FirstRightSection = styled.div`
   justify-content: center;
   padding-left: 75px;
   width: 42%;
+
+  @media (max-width: 464px) {
+    margin-top: 24px;
+    width: 100%;
+    padding-left: 0px;
+  }
 `;
 
 const CreateVidText = styled.div`
-    color: ${({theme}) => theme.primary};
-    font-size: 28px;
-    font-weight: bold;
-    margin-top: 10px;
+  color: ${({theme}) => theme.primary};
+  font-size: 28px;
+  font-weight: bold;
+  margin-top: 10px;
+
+  @media (max-width: 464px) {
+    text-align: center;
+  }
 `;
 
-const SectionContent = styled.div``;
+const SectionContent = styled.div`
+  @media (max-width: 464px) {
+    display: flex;
+    flex-direction: column;
+  }
+`;
 
 const VidBlockChainText = styled.div`
   color: ${({theme}) => theme.primary};
@@ -155,15 +190,25 @@ const AppScreenImage = styled.img`
   width: 190px;
   margin-top: ${({order}) => order * 30}px;
   max-height: 450px;
+
+  @media (max-width: 464px) {
+    margin-top: 0px;
+    margin-bottom: 25px;
+    width: 225px;
+  }
 `;
 
 const AppScreenView = styled.div`
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 25px;
-    margin-bottom: 25px;
-    margin-top: 50px;
-    position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  margin-top: 50px;
+  position: relative;
+  @media (max-width: 464px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const FooterLogoImage = styled.img`
@@ -173,6 +218,12 @@ const FooterLogoImage = styled.img`
     margin: 0px auto;
     left: 0;
     right: 0;
+    @media (max-width: 464px) {
+      position: initial;
+      width: unset;
+      margin: 25px;
+      margin-bottom: 0px;
+    }
 `;
 
 const FooterView = styled.div`
@@ -228,33 +279,33 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Main>
-        <LogoHeader>
-          <LogoImage src={logo} />
-          <DownloadButton>
-              Download App
-          </DownloadButton>
-        </LogoHeader>
         <Section>
             <SectionImage src={Section_1_Graphic} />
             <FirstRightSection>
                 <SectionContent>
                     <LogoImage src={logo} />
-                    <CreateVidText>Create Vids With Movie & Television Scenes</CreateVidText>
+                    <CreateVidText>Interactive Video Creation</CreateVidText>
                 </SectionContent>
+                <DownloadView>
+                    <DownloadContainer>
+                        <DownloadText>Download Our App Today</DownloadText>
+                        <DownloadLinkList>
+                          <DownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
+                            <StoreImage src={AppStore} />
+                          </DownlloadLink>
+                          <DownlloadLink href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
+                            <StoreImage src={GooglePlay} />
+                          </DownlloadLink>
+                        </DownloadLinkList>
+                    </DownloadContainer>
+                </DownloadView>
             </FirstRightSection>
         </Section>
-        <DownloadView>
-            <DownloadContainer>
-                <DownloadText>Download Our App Today</DownloadText>
-                <StoreImage src={AppStore} />
-                <StoreImage src={GooglePlay} />
-            </DownloadContainer>
-        </DownloadView>
         <Section>
             <FirstRightSection>
                 <SectionContent>
                     <LogoImage src={logo} />
-                    <CreateVidText>Cryptocurrency Is A Never Ending Story.</CreateVidText>
+                    <CreateVidText>Earn Cryptocurrency Before The ICO</CreateVidText>
                 </SectionContent>
             </FirstRightSection>
             <SectionImage src={Section_2_Graphic} />

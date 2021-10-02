@@ -23,6 +23,12 @@ html, body {
   padding: 0px 10%;
 }
 
+@media (max-width: 464px) {
+  #root {
+    padding: 0px;
+  }
+}
+
 .carousel-container {
   /* height: 300px; */
 }
