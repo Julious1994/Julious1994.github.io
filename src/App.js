@@ -80,10 +80,10 @@ const LogoImage = styled.img`
 `;
 
 const DownloadView = styled.div`
-    display: flex;
-    flex-direction: column;
-    margin-top: 15px;
-    margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  margin-bottom: 10px;
 
 `;
 
@@ -93,6 +93,10 @@ const DownloadContainer = styled.div`
   border-radius: 60px;
   align-self: center;
   display: flex;
+
+  @media (max-width: 464px) {
+    flex-direction: column;
+  }
 `;
 
 const DownloadText = styled.div`
