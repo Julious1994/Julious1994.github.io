@@ -202,7 +202,7 @@ const FirstRightSection = styled.div`
 `;
 
 const CreateVidText = styled.div`
-  color: ${({theme}) => theme.primary};
+  color: ${({theme, color}) => color ? color : theme.primary};
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
@@ -408,7 +408,7 @@ function App() {
             <FirstRightSection>
                 <SectionContent>
                     <CodeRedLogoImage src={CodeRedLogo} />
-                    <CreateVidText>Earn Cryptocurrency Before The ICO</CreateVidText>
+                    <CreateVidText color="#ff0100">Earn Cryptocurrency Before The ICO</CreateVidText>
                 </SectionContent>
             </FirstRightSection>
             <IcoGif>
