@@ -15,6 +15,15 @@ import AppScreen2 from "./assets/02.png";
 import AppScreen3 from "./assets/03.png";
 import AppScreen4 from "./assets/04.png";
 import AppScreen5 from "./assets/05.png";
+import CodeRedLogo from "./assets/CodeRed.png";
+import ICOGif from "./assets/ICO.gif";
+import GIF1 from "./assets/giphy-1.gif";
+import GIF2 from "./assets/giphy-2.gif";
+import GIF3 from "./assets/giphy-3.gif";
+import GIF4 from "./assets/giphy-4.gif";
+import GIF5 from "./assets/giphy-5.gif";
+import GIF6 from "./assets/giphy-6.gif";
+
 
 
 import "./App.css";
@@ -143,6 +152,33 @@ const SectionImage = styled.img`
   }
 `;
 
+const CryptoImage = styled.img`
+  width: 42%;
+  border: 7px solid #fff;
+  border-radius: 5px;
+  width: 42%;
+  @media (max-width: 464px) {
+    // width: 100%;
+    // flex-wrap: wrap;
+    // justify-content: center;
+  }
+`;
+
+const IcoGif = styled.div`
+  background-image: url(./images/CryptoBg.png);
+  background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 500px;
+  @media (max-width: 464px) {
+    height: 325px;
+    width: 100%;
+  }
+`;
+
 const FirstRightSection = styled.div`
   display: flex;
   flex-direction: column;
@@ -162,6 +198,7 @@ const CreateVidText = styled.div`
   font-size: 28px;
   font-weight: bold;
   margin-top: 10px;
+  font-family: "PoppinsSemiBold";
 
   @media (max-width: 464px) {
     text-align: center;
@@ -175,6 +212,23 @@ const SectionContent = styled.div`
   }
 `;
 
+const SectionImageView = styled.div`
+  width: 50%;
+  background-image: url(./images/TapBg.png);
+  height: 375px;
+  background-size: contain;
+  @media (max-width: 464px) {
+    width: 100%;
+    height: 230px;
+  }
+`;
+
+const GifImage = styled.img`
+  width: 50px;
+  height: 85px;
+  border: 2px solid #fff;
+`;
+
 const VidBlockChainText = styled.div`
   color: ${({theme}) => theme.primary};
   font-size: 28px;
@@ -182,6 +236,7 @@ const VidBlockChainText = styled.div`
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
+  font-family: "PoppinsSemiBold";
 `;
 
 const VidBlockImage = styled.img`
@@ -242,6 +297,7 @@ const RightFooter = styled.div``;
 const FooterLinkText = styled.span`
   color: ${({theme}) => theme.secondary};
   font-size: 7pt;
+  font-family: 'OpenSansRegular';
 `;
 const FooterLink = styled.a`
   text-decoration: none;
@@ -284,7 +340,15 @@ function App() {
     <ThemeProvider theme={theme}>
       <Main>
         <Section>
-            <SectionImage src={Section_1_Graphic} />
+            <SectionImageView>
+              <GifImage src={GIF1} alt="gif1" />
+              <GifImage src={GIF2} alt="gif2" />
+              <GifImage src={GIF3} alt="gif3" />
+              <GifImage src={GIF4} alt="gif4" />
+              <GifImage src={GIF5} alt="gif5" />
+              <GifImage src={GIF6} alt="gif6" />
+
+            </SectionImageView>
             <FirstRightSection>
                 <SectionContent>
                     <LogoImage src={logo} />
@@ -308,11 +372,13 @@ function App() {
         <Section>
             <FirstRightSection>
                 <SectionContent>
-                    <LogoImage src={logo} />
+                    <LogoImage src={CodeRedLogo} />
                     <CreateVidText>Earn Cryptocurrency Before The ICO</CreateVidText>
                 </SectionContent>
             </FirstRightSection>
-            <SectionImage src={Section_2_Graphic} />
+            <IcoGif>
+              <CryptoImage src={ICOGif} />
+            </IcoGif>
         </Section>
         <VidBlockChainText>Vid Block Chains</VidBlockChainText>
       </Main>
