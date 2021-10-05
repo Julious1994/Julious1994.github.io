@@ -156,7 +156,6 @@ const CryptoImage = styled.img`
   width: 42%;
   border: 7px solid #fff;
   border-radius: 5px;
-  width: 42%;
   @media (max-width: 464px) {
     // width: 100%;
     // flex-wrap: wrap;
@@ -187,7 +186,7 @@ const FirstRightSection = styled.div`
   width: 42%;
 
   @media (max-width: 464px) {
-    margin-top: 24px;
+    margin-top: 75px;
     width: 100%;
     padding-left: 0px;
   }
@@ -195,7 +194,7 @@ const FirstRightSection = styled.div`
 
 const CreateVidText = styled.div`
   color: ${({theme}) => theme.primary};
-  font-size: 28px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
   font-family: "PoppinsSemiBold";
@@ -206,6 +205,7 @@ const CreateVidText = styled.div`
 `;
 
 const SectionContent = styled.div`
+  text-align: center;
   @media (max-width: 464px) {
     display: flex;
     flex-direction: column;
@@ -217,21 +217,40 @@ const SectionImageView = styled.div`
   background-image: url(./images/TapBg.png);
   height: 375px;
   background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   @media (max-width: 464px) {
     width: 100%;
-    height: 230px;
   }
+`;
+
+const GifRow = styled.div`
+  display: flex;
+  padding-top: 20px;
+`;
+
+
+const GifCol = styled.div`
+  display: flex;
+  flex-direction: column;
+  ${({marginTop}) => marginTop ? 'margin-top: ' + marginTop + 'px;' : ''}
 `;
 
 const GifImage = styled.img`
   width: 50px;
   height: 85px;
-  border: 2px solid #fff;
+  border: 4px solid ${({orange, theme}) => orange ? theme.primary: theme.secondary};
+  width: 104px;
+  height: 175px;
+  margin: 10px 7px;
+  border-radius: 5px;
 `;
 
 const VidBlockChainText = styled.div`
   color: ${({theme}) => theme.primary};
-  font-size: 28px;
+  font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -341,13 +360,21 @@ function App() {
       <Main>
         <Section>
             <SectionImageView>
-              <GifImage src={GIF1} alt="gif1" />
-              <GifImage src={GIF2} alt="gif2" />
-              <GifImage src={GIF3} alt="gif3" />
-              <GifImage src={GIF4} alt="gif4" />
-              <GifImage src={GIF5} alt="gif5" />
-              <GifImage src={GIF6} alt="gif6" />
+            <GifRow>
+              <GifCol>
+                <GifImage src={GIF1} alt="gif1" />
+                <GifImage src={GIF2} alt="gif2" orange={true} />
+              </GifCol>
+              <GifCol marginTop={30}>
+                <GifImage src={GIF4} alt="gif4" orange={true} />
+                <GifImage src={GIF3} alt="gif3" />
+              </GifCol>
+              <GifCol>
 
+                <GifImage src={GIF5} alt="gif5" />
+                <GifImage src={GIF6} alt="gif6" orange={true} />
+              </GifCol>
+              </GifRow>
             </SectionImageView>
             <FirstRightSection>
                 <SectionContent>
@@ -356,7 +383,6 @@ function App() {
                 </SectionContent>
                 <DownloadView>
                     <DownloadContainer>
-                        <DownloadText>Download Our App Today</DownloadText>
                         <DownloadLinkList>
                           <DownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
                             <StoreImage src={AppStore} />
