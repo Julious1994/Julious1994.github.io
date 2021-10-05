@@ -88,6 +88,15 @@ const LogoImage = styled.img`
   }
 `;
 
+
+const CodeRedLogoImage = styled.img`
+  width: 300px;
+  height: 100px;
+  @media (max-width: 464px) {
+    align-self: center;
+  }
+`;
+
 const DownloadView = styled.div`
   display: flex;
   flex-direction: column;
@@ -398,7 +407,7 @@ function App() {
         <Section>
             <FirstRightSection>
                 <SectionContent>
-                    <LogoImage src={CodeRedLogo} />
+                    <CodeRedLogoImage src={CodeRedLogo} />
                     <CreateVidText>Earn Cryptocurrency Before The ICO</CreateVidText>
                 </SectionContent>
             </FirstRightSection>
