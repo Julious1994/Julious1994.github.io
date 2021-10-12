@@ -409,7 +409,9 @@ function App() {
             <CryptoImage src={ICOGif} />
           </IcoGif>
         </Section>
-        <VidBlockChainText>Vid Block Chains</VidBlockChainText>
+        <VidBlockChainText>
+          Video Scenes With Actors & Influencers
+        </VidBlockChainText>
       </Main>
       <VidBlockImage src={Video_Block_Chain} />
       <AppScreenView>
