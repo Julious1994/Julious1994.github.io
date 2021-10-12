@@ -24,8 +24,6 @@ import GIF4 from "./assets/giphy-4.gif";
 import GIF5 from "./assets/giphy-5.gif";
 import GIF6 from "./assets/giphy-6.gif";
 
-
-
 import "./App.css";
 
 const Main = styled.div`
@@ -40,17 +38,17 @@ const LogoHeader = styled.div`
 `;
 
 const DownloadButton = styled.div`
-    background-color: ${({theme}) => theme.primary};
-    color: ${({theme}) => theme.secondary};
-    font-size: 9pt;
-    height: 25px;
-    padding: 2px 15px;
-    border-radius: 2px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    font-weight: 600;
-    align-self: center;
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.secondary};
+  font-size: 9pt;
+  height: 25px;
+  padding: 2px 15px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  align-self: center;
 `;
 
 const ScreenImage = styled.img`
@@ -81,17 +79,16 @@ const ScreenContainer = styled.div`
 `;
 
 const LogoImage = styled.img`
-  width: 150px;
+  width: 250px;
   height: 45px;
   @media (max-width: 464px) {
     align-self: center;
   }
 `;
 
-
 const CodeRedLogoImage = styled.img`
-  width: 300px;
-  height: 100px;
+  width: 250px;
+  height: 45px;
   @media (max-width: 464px) {
     align-self: center;
   }
@@ -102,11 +99,10 @@ const DownloadView = styled.div`
   flex-direction: column;
   margin-top: 15px;
   margin-bottom: 10px;
-
 `;
 
 const DownloadContainer = styled.div`
-  background-color: ${({theme}) => theme.primary};
+  background-color: ${({ theme }) => theme.primary};
   padding: 15px;
   border-radius: 60px;
   align-self: center;
@@ -118,7 +114,7 @@ const DownloadContainer = styled.div`
 `;
 
 const DownloadText = styled.div`
-  color: ${({theme}) => theme.secondary};
+  color: ${({ theme }) => theme.secondary};
   font-size: 14px;
   font-weight: bold;
   flex: 1;
@@ -139,7 +135,6 @@ const DownloadLinkList = styled.div`
 const DownlloadLink = styled.a`
   margin-left: 10px;
 `;
-
 
 const StoreImage = styled.img`
   width: 100px;
@@ -202,7 +197,7 @@ const FirstRightSection = styled.div`
 `;
 
 const CreateVidText = styled.div`
-  color: ${({theme, color}) => color ? color : theme.primary};
+  color: ${({ theme, color }) => (color ? color : theme.primary)};
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
@@ -240,17 +235,17 @@ const GifRow = styled.div`
   padding-top: 20px;
 `;
 
-
 const GifCol = styled.div`
   display: flex;
   flex-direction: column;
-  ${({marginTop}) => marginTop ? 'margin-top: ' + marginTop + 'px;' : ''}
+  ${({ marginTop }) => (marginTop ? "margin-top: " + marginTop + "px;" : "")}
 `;
 
 const GifImage = styled.img`
   width: 50px;
   height: 85px;
-  border: 4px solid ${({orange, theme}) => orange ? theme.primary: theme.secondary};
+  border: 4px solid
+    ${({ orange, theme }) => (orange ? theme.primary : theme.secondary)};
   width: 104px;
   height: 175px;
   margin: 10px 7px;
@@ -258,7 +253,7 @@ const GifImage = styled.img`
 `;
 
 const VidBlockChainText = styled.div`
-  color: ${({theme}) => theme.primary};
+  color: ${({ theme }) => theme.primary};
   font-size: 16px;
   font-weight: bold;
   margin-top: 10px;
@@ -275,7 +270,7 @@ const VidBlockImage = styled.img`
 
 const AppScreenImage = styled.img`
   width: 190px;
-  margin-top: ${({order}) => order * 30}px;
+  margin-top: ${({ order }) => order * 30}px;
   max-height: 450px;
 
   @media (max-width: 464px) {
@@ -299,18 +294,18 @@ const AppScreenView = styled.div`
 `;
 
 const FooterLogoImage = styled.img`
-    position: absolute;
-    width: 100px;
-    bottom: 0;
-    margin: 0px auto;
-    left: 0;
-    right: 0;
-    @media (max-width: 464px) {
-      position: initial;
-      width: unset;
-      margin: 25px;
-      margin-bottom: 0px;
-    }
+  position: absolute;
+  width: 100px;
+  bottom: 0;
+  margin: 0px auto;
+  left: 0;
+  right: 0;
+  @media (max-width: 464px) {
+    position: initial;
+    width: unset;
+    margin: 25px;
+    margin-bottom: 0px;
+  }
 `;
 
 const FooterView = styled.div`
@@ -323,19 +318,17 @@ const FooterView = styled.div`
 const LeftFooter = styled.div``;
 const RightFooter = styled.div``;
 const FooterLinkText = styled.span`
-  color: ${({theme}) => theme.secondary};
+  color: ${({ theme }) => theme.secondary};
   font-size: 7pt;
-  font-family: 'OpenSansRegular';
+  font-family: "OpenSansRegular";
 `;
 const FooterLink = styled.a`
   text-decoration: none;
 `;
 const PrivacyLink = styled.a`
-    text-decoration: none;
-    margin-right: 25px;
+  text-decoration: none;
+  margin-right: 25px;
 `;
-
-
 
 const AppIconContainer = styled.div`
   margin-top: 24px;
@@ -368,7 +361,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <Main>
         <Section>
-            <SectionImageView>
+          <SectionImageView>
             <GifRow>
               <GifCol>
                 <GifImage src={GIF1} alt="gif1" />
@@ -379,68 +372,69 @@ function App() {
                 <GifImage src={GIF3} alt="gif3" />
               </GifCol>
               <GifCol>
-
                 <GifImage src={GIF5} alt="gif5" />
                 <GifImage src={GIF6} alt="gif6" orange={true} />
               </GifCol>
-              </GifRow>
-            </SectionImageView>
-            <FirstRightSection>
-                <SectionContent>
-                    <LogoImage src={logo} />
-                    <CreateVidText>Interactive Video Creation</CreateVidText>
-                </SectionContent>
-                <DownloadView>
-                    <DownloadContainer>
-                        <DownloadLinkList>
-                          <DownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
-                            <StoreImage src={AppStore} />
-                          </DownlloadLink>
-                          <DownlloadLink href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
-                            <StoreImage src={GooglePlay} />
-                          </DownlloadLink>
-                        </DownloadLinkList>
-                    </DownloadContainer>
-                </DownloadView>
-            </FirstRightSection>
+            </GifRow>
+          </SectionImageView>
+          <FirstRightSection>
+            <SectionContent>
+              <LogoImage src={logo} />
+              <CreateVidText>Interactive Video Creation</CreateVidText>
+            </SectionContent>
+            <DownloadView>
+              <DownloadContainer>
+                <DownloadLinkList>
+                  <DownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
+                    <StoreImage src={AppStore} />
+                  </DownlloadLink>
+                  <DownlloadLink href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
+                    <StoreImage src={GooglePlay} />
+                  </DownlloadLink>
+                </DownloadLinkList>
+              </DownloadContainer>
+            </DownloadView>
+          </FirstRightSection>
         </Section>
         <Section>
-            <FirstRightSection>
-                <SectionContent>
-                    <CodeRedLogoImage src={CodeRedLogo} />
-                    <CreateVidText color="#ff0100">Earn Cryptocurrency Before The ICO</CreateVidText>
-                </SectionContent>
-            </FirstRightSection>
-            <IcoGif>
-              <CryptoImage src={ICOGif} />
-            </IcoGif>
+          <FirstRightSection>
+            <SectionContent>
+              <CodeRedLogoImage src={CodeRedLogo} />
+              <CreateVidText color="#ff0100">
+                Earn Cryptocurrency Before The ICO
+              </CreateVidText>
+            </SectionContent>
+          </FirstRightSection>
+          <IcoGif>
+            <CryptoImage src={ICOGif} />
+          </IcoGif>
         </Section>
         <VidBlockChainText>Vid Block Chains</VidBlockChainText>
       </Main>
-        <VidBlockImage src={Video_Block_Chain} />
-    <AppScreenView>
+      <VidBlockImage src={Video_Block_Chain} />
+      <AppScreenView>
         <AppScreenImage src={AppScreen1} order={4} />
         <AppScreenImage src={AppScreen2} order={2} />
         <AppScreenImage src={AppScreen3} order={0} />
         <AppScreenImage src={AppScreen4} order={2} />
         <AppScreenImage src={AppScreen5} order={4} />
         <FooterLogoImage src={FooterLogo} />
-    </AppScreenView>
-    <FooterView>
+      </AppScreenView>
+      <FooterView>
         <LeftFooter>
-            <PrivacyLink href="www.invidme.com">
-                <FooterLinkText>Privacy</FooterLinkText>
-            </PrivacyLink>
-            <FooterLink href="www.invidme.com">
-                <FooterLinkText>Terms and Conditions</FooterLinkText>
-            </FooterLink>
+          <PrivacyLink href="www.invidme.com">
+            <FooterLinkText>Privacy</FooterLinkText>
+          </PrivacyLink>
+          <FooterLink href="www.invidme.com">
+            <FooterLinkText>Terms and Conditions</FooterLinkText>
+          </FooterLink>
         </LeftFooter>
         <RightFooter>
-            <FooterLink href="www.invidme.com">
-                <FooterLinkText>Copyright &copy; 2021 INVIDMEDesign</FooterLinkText>
-            </FooterLink>
+          <FooterLink href="www.invidme.com">
+            <FooterLinkText>Copyright &copy; 2021 INVIDMEDesign</FooterLinkText>
+          </FooterLink>
         </RightFooter>
-    </FooterView>
+      </FooterView>
     </ThemeProvider>
   );
 }
