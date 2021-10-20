@@ -24,8 +24,8 @@ import GIF4 from "./assets/giphy-4.gif";
 import GIF5 from "./assets/giphy-5.gif";
 import GIF6 from "./assets/giphy-6.gif";
 
-import Particles from 'react-particles-js';
-import particlesConfig from './particlesConfig';
+import Particles from "react-particles-js";
+import particlesConfig from "./particlesConfig";
 
 import "./App.css";
 
@@ -85,6 +85,8 @@ const ScreenContainer = styled.div`
 const LogoImage = styled.img`
   width: 250px;
   height: 45px;
+  animation: move 2.5s linear infinite;
+  padding-bottom: 25px;
   @media (max-width: 464px) {
     align-self: center;
   }
@@ -93,6 +95,8 @@ const LogoImage = styled.img`
 const CodeRedLogoImage = styled.img`
   width: 250px;
   height: 45px;
+  animation: move 2.5s linear infinite;
+  padding-bottom: 25px;
   @media (max-width: 464px) {
     align-self: center;
   }
@@ -366,8 +370,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Main>
-        <div style={{ position: 'absolute'}}>
-          <Particles height="100vh" width="100vw" params={particlesConfig} />
+        <div style={{ position: "absolute" }}>
+          <Particles height="100vh" width="100%" params={particlesConfig} />
         </div>
         <Section>
           <SectionImageView>
