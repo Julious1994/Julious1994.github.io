@@ -24,10 +24,14 @@ import GIF4 from "./assets/giphy-4.gif";
 import GIF5 from "./assets/giphy-5.gif";
 import GIF6 from "./assets/giphy-6.gif";
 
+import Particles from 'react-particles-js';
+import particlesConfig from './particlesConfig';
+
 import "./App.css";
 
 const Main = styled.div`
   padding: 0px 2%;
+  position: relative;
 `;
 
 const LogoHeader = styled.div`
@@ -145,6 +149,8 @@ const Section = styled.div`
   display: flex;
   margin: 40px;
   flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
 `;
 
 const SectionImage = styled.img`
@@ -360,6 +366,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Main>
+        <div style={{ position: 'absolute'}}>
+          <Particles height="100vh" width="100vw" params={particlesConfig} />
+        </div>
         <Section>
           <SectionImageView>
             <GifRow>
