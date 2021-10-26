@@ -26,6 +26,7 @@ import GIF6 from "./assets/giphy-6.gif";
 
 import Particles from "react-particles-js";
 import particlesConfig from "./particlesConfig";
+import Header from "./Header";
 
 import "./App.css";
 
@@ -369,6 +370,7 @@ const IosIcon = styled.img`
 function App() {
   return (
     <ThemeProvider theme={theme}>
+      <Header />
       <Main>
         <div style={{ position: "absolute" }}>
           <Particles height="100vh" width="100%" params={particlesConfig} />
