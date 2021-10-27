@@ -33,6 +33,11 @@ import "./App.css";
 const Main = styled.div`
   padding: 0px 2%;
   position: relative;
+  margin-top: 100px;
+`;
+
+const Container = styled.div`
+  position: relative;
 `;
 
 const LogoHeader = styled.div`
@@ -371,10 +376,11 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
+      <Container>
       <Main>
-        <div style={{ position: "absolute" }}>
+        {/* <div style={{ position: "absolute" }}>
           <Particles height="100vh" width="100%" params={particlesConfig} />
-        </div>
+        </div> */}
         <Section>
           <SectionImageView>
             <GifRow>
@@ -452,6 +458,7 @@ function App() {
           </FooterLink>
         </RightFooter>
       </FooterView>
+      </Container>
     </ThemeProvider>
   );
 }
