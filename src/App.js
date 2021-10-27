@@ -161,6 +161,10 @@ const Section = styled.div`
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 464px) {
+    margin: 40px 5px;
+  }
 `;
 
 const SectionImage = styled.img`
@@ -243,6 +247,7 @@ const SectionImageView = styled.div`
   align-items: center;
   @media (max-width: 464px) {
     width: 100%;
+    height: 425px;
   }
 `;
 
@@ -258,14 +263,17 @@ const GifCol = styled.div`
 `;
 
 const GifImage = styled.img`
-  width: 50px;
-  height: 85px;
   border: 4px solid
     ${({ orange, theme }) => (orange ? theme.primary : theme.secondary)};
   width: 104px;
   height: 175px;
   margin: 10px 7px;
   border-radius: 5px;
+
+  @media (max-width: 464px) {
+    width: 90px;
+    height: 150px;
+  }
 `;
 
 const VidBlockChainText = styled.div`

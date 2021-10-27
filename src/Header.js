@@ -25,12 +25,21 @@ const HeaderContainer = styled.div`
   right: 0;
   z-index: 999;
   top: 0;
-    background-color: black;
+  background-color: black;
+
+  @media (max-width: 464px) {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 `;
 
 const LogoContainer = styled.div`
   padding: 0px 2%;
   position: relative;
+
+  @media (max-width: 464px) {
+    padding-bottom: 16px;
+  }
 `;
 
 const LinkContainer = styled.div`
