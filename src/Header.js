@@ -53,6 +53,7 @@ const LogoImage = styled.img`
 
 const LinkImage = styled.img`
   padding: 0px 5px;
+  width: 25px;
 `;
 
 const Link = styled.a``;

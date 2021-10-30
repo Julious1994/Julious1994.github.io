@@ -2,27 +2,25 @@ import React from "react";
 import styled, { ThemeProvider } from "styled-components";
 import theme from "./theme";
 
-// import logo from "./assets/logo.mp4";
 import logo from "./assets/header-logo.png";
 import FooterLogo from "./assets/Footer-logo.png";
 import Video_Block_Chain from "./assets/Video_Block_Chain.png";
 import AppStore from "./assets/AppStore.png";
 import GooglePlay from "./assets/GooglePlay.png";
-import Section_1_Graphic from "./assets/Section_1_Graphic.png";
-import Section_2_Graphic from "./assets/Section_4_Image.png";
 import AppScreen1 from "./assets/01.png";
 import AppScreen2 from "./assets/02.png";
 import AppScreen3 from "./assets/03.png";
 import AppScreen4 from "./assets/04.png";
 import AppScreen5 from "./assets/05.png";
 import CodeRedLogo from "./assets/CodeRed.png";
-import ICOGif from "./assets/ICO.gif";
 import GIF1 from "./assets/giphy-1.gif";
 import GIF2 from "./assets/giphy-2.gif";
 import GIF3 from "./assets/giphy-3.gif";
 import GIF4 from "./assets/giphy-4.gif";
 import GIF5 from "./assets/giphy-5.gif";
 import GIF6 from "./assets/giphy-6.gif";
+import NFTBanner from "./assets/NFTBanner.png";
+import CryptoCoin from "./assets/CryptoCoin.gif";
 
 import Particles from "react-particles-js";
 import particlesConfig from "./particlesConfig";
@@ -171,19 +169,13 @@ const SectionImage = styled.img`
   width: 42%;
   @media (max-width: 464px) {
     width: 100%;
-    // flex-wrap: wrap;
-    // justify-content: center;
   }
 `;
 
 const CryptoImage = styled.img`
-  width: 42%;
-  border: 7px solid #fff;
-  border-radius: 5px;
+  width: 50%;
   @media (max-width: 464px) {
-    // width: 100%;
-    // flex-wrap: wrap;
-    // justify-content: center;
+    width: 250px;
   }
 `;
 
@@ -195,10 +187,15 @@ const IcoGif = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
-  height: 500px;
+  height: 725px;
   @media (max-width: 464px) {
-    height: 325px;
+    height: 390px;
     width: 100%;
+    margin: 0px auto;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 `;
 
@@ -239,7 +236,7 @@ const SectionContent = styled.div`
 const SectionImageView = styled.div`
   width: 50%;
   background-image: url(./images/TapBg.png);
-  height: 375px;
+  height: 505px;
   background-size: contain;
   display: flex;
   flex-direction: column;
@@ -380,6 +377,12 @@ const IosIcon = styled.img`
   }
 `;
 
+const NFTBannerImage = styled.img`
+  width: 40%;
+  display: flex;
+  margin: 0px auto;
+`;
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -435,12 +438,10 @@ function App() {
             </SectionContent>
           </FirstRightSection>
           <IcoGif>
-            <CryptoImage src={ICOGif} />
+            <CryptoImage src={CryptoCoin} />
           </IcoGif>
         </Section>
-        <VidBlockChainText>
-          Video Scenes With Actors & Influencers
-        </VidBlockChainText>
+        <NFTBannerImage src={NFTBanner} />
       </Main>
       <VidBlockImage src={Video_Block_Chain} />
       <AppScreenView>
