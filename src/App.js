@@ -99,8 +99,6 @@ const LogoImage = styled.img`
 const CodeRedLogoImage = styled.img`
   width: 250px;
   height: 45px;
-  animation: move 2.5s linear infinite;
-  padding-bottom: 25px;
   @media (max-width: 464px) {
     align-self: center;
   }
@@ -173,7 +171,7 @@ const SectionImage = styled.img`
 `;
 
 const CryptoImage = styled.img`
-  width: 50%;
+  width: 60%;
   @media (max-width: 464px) {
     width: 250px;
   }
@@ -187,7 +185,11 @@ const IcoGif = styled.div`
   justify-content: center;
   align-items: center;
   flex: 1;
-  height: 725px;
+  height: 425px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
   @media (max-width: 464px) {
     height: 390px;
     width: 100%;
@@ -196,6 +198,8 @@ const IcoGif = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-repeat: unset;
+    background-position: unset;
   }
 `;
 
@@ -203,7 +207,7 @@ const FirstRightSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 75px;
+  padding-left: 8%;
   width: 42%;
 
   @media (max-width: 464px) {
@@ -242,15 +246,23 @@ const SectionImageView = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   @media (max-width: 464px) {
     width: 100%;
     height: 425px;
+    margin-top: 75px;
+    background-position: unset;
   }
 `;
 
 const GifRow = styled.div`
   display: flex;
   padding-top: 20px;
+  @media (max-width: 464px) {
+    padding-top: 0px;
+  }
 `;
 
 const GifCol = styled.div`
