@@ -32,6 +32,9 @@ const Main = styled.div`
   padding: 0px 2%;
   position: relative;
   margin-top: 100px;
+  @media (max-width: 464px) {
+    margin-top: 0px;
+  }
 `;
 
 const Container = styled.div`
@@ -159,7 +162,11 @@ const Section = styled.div`
   overflow: hidden;
 
   @media (max-width: 464px) {
-    margin: 40px 5px;
+    margin: 40px 5px; 
+    ${({reverse}) => reverse && `
+      flex-direction: column-reverse;
+      margin-top: 10px;
+    `};
   }
 `;
 
@@ -191,7 +198,7 @@ const IcoGif = styled.div`
   background-position: center;
 
   @media (max-width: 464px) {
-    height: 390px;
+    height: 340px;
     width: 100%;
     margin: 0px auto;
     background-size: cover;
@@ -404,7 +411,7 @@ function App() {
         {/* <div style={{ position: "absolute" }}>
           <Particles height="100vh" width="100%" params={particlesConfig} />
         </div> */}
-        <Section>
+        <Section reverse={true}>
           <SectionImageView>
             <GifRow>
               <GifCol>
