@@ -182,6 +182,10 @@ const CryptoImage = styled.img`
   @media (max-width: 464px) {
     width: 250px;
   }
+
+  @media (max-width: 320px) {
+    width: 200px;
+  }
 `;
 
 const IcoGif = styled.div`
@@ -198,10 +202,27 @@ const IcoGif = styled.div`
   background-position: center;
 
   @media (max-width: 464px) {
-    height: 340px;
+    height: 390px;
     width: 100%;
     margin: 0px auto;
-    background-size: cover;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-repeat: unset;
+    background-position: unset;
+  }
+
+
+  @media (max-width: 375px) {
+    height: 350px;
+  }
+
+  @media (max-width: 320px) {
+    height: 300px;
+    width: 100%;
+    margin: 0px auto;
+    background-size: contain;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -288,6 +309,11 @@ const GifImage = styled.img`
 
   @media (max-width: 464px) {
     width: 90px;
+    height: 150px;
+  }
+
+  @media (max-width: 320px) {
+    width: 75px;
     height: 150px;
   }
 `;
