@@ -423,7 +423,8 @@ const IosIcon = styled.img`
 `;
 
 const NFTBannerImage = styled.img`
-  width: 40%;
+  width: 250px;
+  height: 75px;
   display: flex;
   margin: 0px auto;
 `;
