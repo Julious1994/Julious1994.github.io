@@ -429,6 +429,11 @@ const NFTBannerImage = styled.img`
   margin: 0px auto;
 `;
 
+const PoweredText = styled.div`
+  color: #ff0100;
+  margin-bottom: 10px;
+`;
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
@@ -458,7 +463,7 @@ function App() {
           <FirstRightSection>
             <SectionContent>
               <LogoImage src={logo} />
-              <CreateVidText>Interactive Video Creation</CreateVidText>
+              <CreateVidText>Interactive NFT Skit Creation</CreateVidText>
             </SectionContent>
             <DownloadView>
               <DownloadContainer>
@@ -477,6 +482,7 @@ function App() {
         <Section>
           <FirstRightSection>
             <SectionContent>
+              <PoweredText>Powered By</PoweredText>
               <CodeRedLogoImage src={CodeRedLogo} />
               <CreateVidText color="#ff0100">
                 Earn Cryptocurrency Before The ICO
