@@ -115,9 +115,7 @@ const DownloadView = styled.div`
 `;
 
 const DownloadContainer = styled.div`
-  background-color: ${({ theme }) => theme.primary};
   padding: 15px;
-  border-radius: 60px;
   align-self: center;
   display: flex;
 
@@ -149,9 +147,13 @@ const DownlloadLink = styled.a`
   margin-left: 10px;
 `;
 
+const AppStoreDownlloadLink = styled.a`
+  margin-left: 2px;
+`;
+
 const StoreImage = styled.img`
-  width: 100px;
-  height: 30px;
+  width: 112px;
+  height: 32px;
 `;
 
 const Section = styled.div`
@@ -336,7 +338,7 @@ const VidBlockImage = styled.img`
 
 const AppScreenImage = styled.img`
   width: 190px;
-  margin-top: ${({ order }) => order * 30}px;
+  margin-top: 30px;
   max-height: 450px;
 
   @media (max-width: 464px) {
@@ -353,24 +355,43 @@ const AppScreenView = styled.div`
   margin-bottom: 25px;
   margin-top: 50px;
   position: relative;
+  overflow-y: auto;
+  height: 600px;
+  position: relative;
+  justify-content: space-between;
+  padding: 0px 20% 25px 16%;
+  ::-webkit-scrollbar {
+      width: 0;  /* Remove scrollbar space */
+      background: transparent;  /* Optional: just make scrollbar invisible */
+  }
   @media (max-width: 464px) {
     flex-wrap: wrap;
     justify-content: center;
+    overflow-y: unset;
+    height: unset;
   }
+`;
+
+const AppScreenColumn = styled.div`
+  display: flex;
+  flex-direction: column;
 `;
 
 const FooterLogoImage = styled.img`
   position: absolute;
-  width: 100px;
+  width: 120px;
   bottom: 0;
   margin: 0px auto;
   left: 0;
   right: 0;
+  position: sticky;
+  top: 50%;
+  height: 96px;
+  margin: 24px;
   @media (max-width: 464px) {
     position: initial;
     width: unset;
-    margin: 25px;
-    margin-bottom: 0px;
+    margin: 25px auto;
   }
 `;
 
@@ -468,9 +489,9 @@ function App() {
             <DownloadView>
               <DownloadContainer>
                 <DownloadLinkList>
-                  <DownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
+                  <AppStoreDownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
                     <StoreImage src={AppStore} />
-                  </DownlloadLink>
+                  </AppStoreDownlloadLink>
                   <DownlloadLink href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
                     <StoreImage src={GooglePlay} />
                   </DownlloadLink>
@@ -497,12 +518,17 @@ function App() {
       </Main>
       <VidBlockImage src={Video_Block_Chain} />
       <AppScreenView>
-        <AppScreenImage src={AppScreen1} order={4} />
-        <AppScreenImage src={AppScreen2} order={2} />
-        <AppScreenImage src={AppScreen3} order={0} />
-        <AppScreenImage src={AppScreen4} order={2} />
-        <AppScreenImage src={AppScreen5} order={4} />
+        <AppScreenColumn>
+          <AppScreenImage src={AppScreen1} order={4} />
+          <AppScreenImage src={AppScreen2} order={2} />
+          <AppScreenImage src={AppScreen3} order={0} />
+        </AppScreenColumn>
         <FooterLogoImage src={FooterLogo} />
+        <AppScreenColumn>
+          <AppScreenImage src={AppScreen3} order={0} />
+          <AppScreenImage src={AppScreen4} order={2} />
+          <AppScreenImage src={AppScreen5} order={4} />
+        </AppScreenColumn>
       </AppScreenView>
       <FooterView>
         <LeftFooter>

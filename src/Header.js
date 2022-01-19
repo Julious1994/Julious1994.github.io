@@ -5,14 +5,13 @@ import theme from "./theme";
 // import logo from "./assets/logo.mp4";
 import CoderedIcon from "./assets/CoderedIcon.png";
 import InvidmeIcon from "./assets/InvidmeIcon.png";
-import Facebook from "./assets/Facebook.png";
-import Twitter from "./assets/Twitter.png";
-import Linkedin from "./assets/Linkedin.png";
-import Discord from "./assets/Discord.png";
-import Reddit from "./assets/Reddit.png";
-import Telegram from "./assets/Telegram.png";
-import Youtube from "./assets/Youtube.png";
-import Instagram from "./assets/Instagram.png";
+import Facebook from "./assets/Facebook.svg";
+import Twitter from "./assets/Twitter.svg";
+import Discord from "./assets/Discord.svg";
+import Reddit from "./assets/Reddit.svg";
+import Telegram from "./assets/Telegram.svg";
+import Youtube from "./assets/Youtube.svg";
+import Instagram from "./assets/Instagram.svg";
 
 import "./Header.css";
 
@@ -52,8 +51,12 @@ const LogoImage = styled.img`
 `;
 
 const LinkImage = styled.img`
-  padding: 0px 5px;
-  width: 25px;
+  padding: 8px 8px;
+  width: 16px;
+  height: 16px;
+  margin-right: 7px;
+  border: 2px solid #FF8434;
+  border-radius: 5px;
 `;
 
 const Link = styled.a``;
