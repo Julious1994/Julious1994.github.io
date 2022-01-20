@@ -31,9 +31,9 @@ import "./App.css";
 const Main = styled.div`
   padding: 0px 2%;
   position: relative;
-  margin-top: 100px;
+  margin: 0px 10%;
   @media (max-width: 464px) {
-    margin-top: 0px;
+    margin: 0px 0%;
   }
 `;
 
@@ -92,7 +92,6 @@ const ScreenContainer = styled.div`
 const LogoImage = styled.img`
   width: 250px;
   height: 45px;
-  animation: move 2.5s linear infinite;
   padding-bottom: 25px;
   @media (max-width: 464px) {
     align-self: center;
@@ -158,13 +157,13 @@ const StoreImage = styled.img`
 
 const Section = styled.div`
   display: flex;
-  margin: 40px;
+  margin: 24px;
   flex-wrap: wrap;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 464px) {
-    margin: 40px 5px; 
+    margin: 8px 5px; 
     ${({reverse}) => reverse && `
       flex-direction: column-reverse;
       margin-top: 10px;
@@ -241,7 +240,7 @@ const FirstRightSection = styled.div`
   width: 42%;
 
   @media (max-width: 464px) {
-    margin-top: 75px;
+    margin-top: 16px;
     width: 100%;
     padding-left: 0px;
   }
@@ -282,7 +281,7 @@ const SectionImageView = styled.div`
   @media (max-width: 464px) {
     width: 100%;
     height: 425px;
-    margin-top: 75px;
+    margin-top: 24px;
     background-position: unset;
   }
 `;
@@ -352,14 +351,14 @@ const AppScreenView = styled.div`
   display: flex;
   justify-content: space-between;
   padding-bottom: 25px;
-  margin-bottom: 25px;
-  margin-top: 50px;
+  margin: 50px 10% 25px 10%;
   position: relative;
   overflow-y: auto;
+  overscroll-behavior: auto;
   height: 600px;
   position: relative;
   justify-content: space-between;
-  padding: 0px 20% 25px 16%;
+  padding: 0px 8% 25px 8%;
   ::-webkit-scrollbar {
       width: 0;  /* Remove scrollbar space */
       background: transparent;  /* Optional: just make scrollbar invisible */
@@ -389,7 +388,7 @@ const FooterLogoImage = styled.img`
   height: 96px;
   margin: 24px;
   @media (max-width: 464px) {
-    position: initial;
+    position: initial !important;
     width: unset;
     margin: 25px auto;
   }
@@ -460,77 +459,74 @@ function App() {
     <ThemeProvider theme={theme}>
       <Header />
       <Container>
-      <Main>
-        {/* <div style={{ position: "absolute" }}>
-          <Particles height="100vh" width="100%" params={particlesConfig} />
-        </div> */}
-        <Section reverse={true}>
-          <SectionImageView>
-            <GifRow>
-              <GifCol>
-                <GifImage src={GIF1} alt="gif1" />
-                <GifImage src={GIF2} alt="gif2" orange={true} />
-              </GifCol>
-              <GifCol marginTop={30}>
-                <GifImage src={GIF4} alt="gif4" orange={true} />
-                <GifImage src={GIF3} alt="gif3" />
-              </GifCol>
-              <GifCol>
-                <GifImage src={GIF5} alt="gif5" />
-                <GifImage src={GIF6} alt="gif6" orange={true} />
-              </GifCol>
-            </GifRow>
-          </SectionImageView>
-          <FirstRightSection>
-            <SectionContent>
-              <LogoImage src={logo} />
-              <CreateVidText>Interactive NFT Skit Creation</CreateVidText>
-            </SectionContent>
-            <DownloadView>
-              <DownloadContainer>
-                <DownloadLinkList>
-                  <AppStoreDownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
-                    <StoreImage src={AppStore} />
-                  </AppStoreDownlloadLink>
-                  <DownlloadLink href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
-                    <StoreImage src={GooglePlay} />
-                  </DownlloadLink>
-                </DownloadLinkList>
-              </DownloadContainer>
-            </DownloadView>
-          </FirstRightSection>
-        </Section>
-        <Section>
-          <FirstRightSection>
-            <SectionContent>
-              <PoweredText>Powered By</PoweredText>
-              <CodeRedLogoImage src={CodeRedLogo} />
-              <CreateVidText color="#ff0100">
-                Earn Cryptocurrency Before The ICO
-              </CreateVidText>
-            </SectionContent>
-          </FirstRightSection>
-          <IcoGif>
-            <CryptoImage src={CryptoCoin} />
-          </IcoGif>
-        </Section>
-        <NFTBannerImage src={NFTBanner} />
-      </Main>
-      <VidBlockImage src={Video_Block_Chain} />
-      <AppScreenView>
-        <AppScreenColumn>
-          <AppScreenImage src={AppScreen1} order={4} />
-          <AppScreenImage src={AppScreen2} order={2} />
-          <AppScreenImage src={AppScreen3} order={0} />
-        </AppScreenColumn>
-        <FooterLogoImage src={FooterLogo} />
-        <AppScreenColumn>
-          <AppScreenImage src={AppScreen3} order={0} />
-          <AppScreenImage src={AppScreen4} order={2} />
-          <AppScreenImage src={AppScreen5} order={4} />
-        </AppScreenColumn>
-      </AppScreenView>
-      <FooterView>
+        <Main>
+          <Section reverse={true}>
+            <SectionImageView>
+              <GifRow>
+                <GifCol>
+                  <GifImage src={GIF1} alt="gif1" />
+                  <GifImage src={GIF2} alt="gif2" orange={true} />
+                </GifCol>
+                <GifCol marginTop={30}>
+                  <GifImage src={GIF4} alt="gif4" orange={true} />
+                  <GifImage src={GIF3} alt="gif3" />
+                </GifCol>
+                <GifCol>
+                  <GifImage src={GIF5} alt="gif5" />
+                  <GifImage src={GIF6} alt="gif6" orange={true} />
+                </GifCol>
+              </GifRow>
+            </SectionImageView>
+            <FirstRightSection>
+              <SectionContent>
+                <LogoImage src={logo} />
+                <CreateVidText>Interactive NFT Skit Creation</CreateVidText>
+              </SectionContent>
+              <DownloadView>
+                <DownloadContainer>
+                  <DownloadLinkList>
+                    <AppStoreDownlloadLink href="https://apps.apple.com/us/app/invidme/id1391720769">
+                      <StoreImage src={AppStore} />
+                    </AppStoreDownlloadLink>
+                    <DownlloadLink href="https://play.google.com/store/apps/details?id=com.invidme&hl=en_US&gl=US">
+                      <StoreImage src={GooglePlay} />
+                    </DownlloadLink>
+                  </DownloadLinkList>
+                </DownloadContainer>
+              </DownloadView>
+            </FirstRightSection>
+          </Section>
+          <Section>
+            <FirstRightSection>
+              <SectionContent>
+                <PoweredText>Powered By</PoweredText>
+                <CodeRedLogoImage src={CodeRedLogo} />
+                <CreateVidText color="#ff0100">
+                  Earn Cryptocurrency Before The ICO
+                </CreateVidText>
+              </SectionContent>
+            </FirstRightSection>
+            <IcoGif>
+              <CryptoImage src={CryptoCoin} />
+            </IcoGif>
+          </Section>
+          <NFTBannerImage src={NFTBanner} />
+        </Main>
+        <VidBlockImage src={Video_Block_Chain} />
+        <AppScreenView>
+          <AppScreenColumn>
+            <AppScreenImage src={AppScreen1} order={4} />
+            <AppScreenImage src={AppScreen2} order={2} />
+            <AppScreenImage src={AppScreen3} order={0} />
+          </AppScreenColumn>
+          <FooterLogoImage src={FooterLogo} />
+          <AppScreenColumn>
+            <AppScreenImage src={AppScreen3} order={0} />
+            <AppScreenImage src={AppScreen4} order={2} />
+            <AppScreenImage src={AppScreen5} order={4} />
+          </AppScreenColumn>
+        </AppScreenView>
+        <FooterView>
         <LeftFooter>
           <PrivacyLink href="www.invidme.com">
             <FooterLinkText>Privacy</FooterLinkText>

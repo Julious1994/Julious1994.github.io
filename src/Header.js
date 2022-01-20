@@ -18,7 +18,7 @@ import "./Header.css";
 const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  padding: 20px 10px;
+  padding: 20px 12%;
   position: sticky;
   left: 0;
   right: 0;
@@ -27,8 +27,10 @@ const HeaderContainer = styled.div`
   background-color: black;
 
   @media (max-width: 464px) {
+    position: initial;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px 0%;
   }
 `;
 
