@@ -92,7 +92,7 @@ const ScreenContainer = styled.div`
 const LogoImage = styled.img`
   width: 250px;
   height: 45px;
-  padding-bottom: 25px;
+  margin-bottom: 2px;
   @media (max-width: 464px) {
     align-self: center;
   }
@@ -109,7 +109,6 @@ const CodeRedLogoImage = styled.img`
 const DownloadView = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 15px;
   margin-bottom: 10px;
 `;
 
@@ -151,8 +150,8 @@ const AppStoreDownlloadLink = styled.a`
 `;
 
 const StoreImage = styled.img`
-  width: 112px;
-  height: 32px;
+  width: 100px;
+  height: 30px;
 `;
 
 const Section = styled.div`
@@ -337,7 +336,7 @@ const VidBlockImage = styled.img`
 
 const AppScreenImage = styled.img`
   width: 190px;
-  margin-top: 30px;
+  margin-top: ${({ order }) => order * 30}px;
   max-height: 450px;
 
   @media (max-width: 464px) {
@@ -353,21 +352,9 @@ const AppScreenView = styled.div`
   padding-bottom: 25px;
   margin: 50px 10% 25px 10%;
   position: relative;
-  overflow-y: auto;
-  overscroll-behavior: auto;
-  height: 600px;
-  position: relative;
-  justify-content: space-between;
-  padding: 0px 8% 25px 8%;
-  ::-webkit-scrollbar {
-      width: 0;  /* Remove scrollbar space */
-      background: transparent;  /* Optional: just make scrollbar invisible */
-  }
   @media (max-width: 464px) {
     flex-wrap: wrap;
     justify-content: center;
-    overflow-y: unset;
-    height: unset;
   }
 `;
 
@@ -378,19 +365,16 @@ const AppScreenColumn = styled.div`
 
 const FooterLogoImage = styled.img`
   position: absolute;
-  width: 120px;
+  width: 100px;
   bottom: 0;
   margin: 0px auto;
   left: 0;
   right: 0;
-  position: sticky;
-  top: 50%;
-  height: 96px;
-  margin: 24px;
   @media (max-width: 464px) {
     position: initial !important;
     width: unset;
-    margin: 25px auto;
+    margin: 25px;
+    margin-bottom: 0px;
   }
 `;
 
@@ -514,17 +498,12 @@ function App() {
         </Main>
         <VidBlockImage src={Video_Block_Chain} />
         <AppScreenView>
-          <AppScreenColumn>
-            <AppScreenImage src={AppScreen1} order={4} />
-            <AppScreenImage src={AppScreen2} order={2} />
-            <AppScreenImage src={AppScreen3} order={0} />
-          </AppScreenColumn>
+          <AppScreenImage src={AppScreen1} order={4} />
+          <AppScreenImage src={AppScreen2} order={2} />
+          <AppScreenImage src={AppScreen3} order={0} />
+          <AppScreenImage src={AppScreen4} order={2} />
+          <AppScreenImage src={AppScreen5} order={4} />
           <FooterLogoImage src={FooterLogo} />
-          <AppScreenColumn>
-            <AppScreenImage src={AppScreen3} order={0} />
-            <AppScreenImage src={AppScreen4} order={2} />
-            <AppScreenImage src={AppScreen5} order={4} />
-          </AppScreenColumn>
         </AppScreenView>
         <FooterView>
         <LeftFooter>
