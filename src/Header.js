@@ -1,6 +1,5 @@
 import React from "react";
-import styled, { ThemeProvider } from "styled-components";
-import theme from "./theme";
+import styled from "styled-components";
 
 // import logo from "./assets/logo.mp4";
 import CoderedIcon from "./assets/CoderedIcon.png";

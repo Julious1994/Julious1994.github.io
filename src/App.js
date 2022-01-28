@@ -21,9 +21,6 @@ import GIF5 from "./assets/giphy-5.gif";
 import GIF6 from "./assets/giphy-6.gif";
 import NFTBanner from "./assets/NFTBanner.png";
 import CryptoCoin from "./assets/CryptoCoin.gif";
-
-import Particles from "react-particles-js";
-import particlesConfig from "./particlesConfig";
 import Header from "./Header";
 
 import "./App.css";
@@ -39,54 +36,6 @@ const Main = styled.div`
 
 const Container = styled.div`
   position: relative;
-`;
-
-const LogoHeader = styled.div`
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #3f3f3f;
-  padding: 15px 50px;
-`;
-
-const DownloadButton = styled.div`
-  background-color: ${({ theme }) => theme.primary};
-  color: ${({ theme }) => theme.secondary};
-  font-size: 9pt;
-  height: 25px;
-  padding: 2px 15px;
-  border-radius: 2px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-weight: 600;
-  align-self: center;
-`;
-
-const ScreenImage = styled.img`
-  min-width: 125px;
-  width: 10%;
-  height: 275px;
-  margin-right: 8px;
-  @media (max-width: 464px) {
-    width: 80px;
-    height: 200px;
-    min-width: 80px;
-    margin: 4px;
-  }
-`;
-
-const ScreenContainer = styled.div`
-  display: flex;
-  flex-wrap: no-wrap;
-  @media (max-width: 464px) {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  @media (max-width: 924px) {
-    width: 100%;
-    justify-content: center;
-    margin-top: 16px;
-  }
 `;
 
 const LogoImage = styled.img`
@@ -120,17 +69,6 @@ const DownloadContainer = styled.div`
   @media (max-width: 464px) {
     flex-direction: column;
   }
-`;
-
-const DownloadText = styled.div`
-  color: ${({ theme }) => theme.secondary};
-  font-size: 14px;
-  font-weight: bold;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
 `;
 
 const DownloadLinkList = styled.div`
@@ -167,13 +105,6 @@ const Section = styled.div`
       flex-direction: column-reverse;
       margin-top: 10px;
     `};
-  }
-`;
-
-const SectionImage = styled.img`
-  width: 42%;
-  @media (max-width: 464px) {
-    width: 100%;
   }
 `;
 
@@ -318,16 +249,6 @@ const GifImage = styled.img`
   }
 `;
 
-const VidBlockChainText = styled.div`
-  color: ${({ theme }) => theme.primary};
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  font-family: "PoppinsSemiBold";
-`;
-
 const VidBlockImage = styled.img`
   width: 100%;
   margin-top: 20px;
@@ -356,11 +277,6 @@ const AppScreenView = styled.div`
     flex-wrap: wrap;
     justify-content: center;
   }
-`;
-
-const AppScreenColumn = styled.div`
-  display: flex;
-  flex-direction: column;
 `;
 
 const FooterLogoImage = styled.img`
@@ -398,32 +314,6 @@ const FooterLink = styled.a`
 const PrivacyLink = styled.a`
   text-decoration: none;
   margin-right: 25px;
-`;
-
-const AppIconContainer = styled.div`
-  margin-top: 24px;
-  display: flex;
-  justify-content: center;
-`;
-
-const AppIcon = styled.img`
-  width: 200px;
-  height: 175px;
-  cursor: pointer;
-  @media (max-width: 464px) {
-    width: 100px;
-    height: 100px;
-  }
-`;
-
-const IosIcon = styled.img`
-  width: 175px;
-  height: 175px;
-  cursor: pointer;
-  @media (max-width: 464px) {
-    width: 100px;
-    height: 100px;
-  }
 `;
 
 const NFTBannerImage = styled.img`
